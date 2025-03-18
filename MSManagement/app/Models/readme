@@ -1,0 +1,20 @@
+Ce dossier `Models` est destiné à contenir toutes les classes de modèles utilisées dans 
+l'application. Les modèles représentent les entités principales de l'application 
+et sont responsables de la gestion des données, des relations entre les entités, 
+ainsi que des interactions avec la base de données. 
+Chaque fichier dans ce dossier doit correspondre à une entité spécifique 
+et inclure les attributs, les méthodes, et les règles de validation nécessaires pour cette entité. 
+Assurez-vous de respecter une structure claire et cohérente pour faciliter la maintenance 
+et l'évolution du projet.
+Exemple :
+class User {
+    String name
+    String email
+    String password
+
+    static constraints = {
+        name blank: false, size: 3..50
+        email blank: false, email: true, unique: true
+        password blank: false, password: true
+    }
+}

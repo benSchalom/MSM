@@ -1,0 +1,8 @@
+Ce dossier `config` est destiné à contenir tous les fichiers de configuration nécessaires au bon fonctionnement du projet MSManagement. Ces fichiers peuvent inclure des paramètres globaux, des configurations spécifiques à l'environnement (développement, test, production), ou encore des fichiers de définition pour des services externes. Par exemple :
+
+- `app.config.json` : Contient les paramètres globaux de l'application, comme les ports, les clés API, ou les options de journalisation.
+- `database.config.json` : Définit les informations de connexion à la base de données (hôte, port, utilisateur, mot de passe).
+- `env.production.json` : Spécifie les configurations spécifiques à l'environnement de production.
+- `services.config.yaml` : Liste les services externes utilisés par l'application avec leurs configurations respectives.
+
+Ces fichiers doivent être maintenus à jour et sécurisés, en évitant d'y inclure des informations sensibles non chiffrées.

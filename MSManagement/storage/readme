@@ -1,0 +1,12 @@
+Ce dossier contient les fichiers nécessaires au projet, qui combine PHP, JavaScript et des dépendances gérées par Composer et npm. Il inclut le code source PHP pour la logique côté serveur, les fichiers JavaScript pour les interactions côté client, ainsi que les fichiers de configuration pour Composer et npm. Voici un aperçu des principaux fichiers et dossiers attendus :
+
+- `src/` : Contient le code source PHP.
+- `public/` : Contient les fichiers accessibles publiquement, comme les fichiers HTML, CSS, et JavaScript.
+- `composer.json` : Fichier de configuration pour gérer les dépendances PHP via Composer.
+- `package.json` : Fichier de configuration pour gérer les dépendances JavaScript via npm.
+- `node_modules/` : Dossier généré contenant les dépendances JavaScript installées.
+- `vendor/` : Dossier généré contenant les dépendances PHP installées.
+- `README.md` : Documentation du projet.
+- `.env` : Fichier de configuration pour les variables d'environnement (non inclus dans le contrôle de version).
+
+Assurez-vous d'exécuter `composer install` et `npm install` après avoir cloné le projet pour installer toutes les dépendances nécessaires.

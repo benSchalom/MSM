@@ -1,0 +1,35 @@
+Ce dossier `/app/Http/Middleware` est destiné à contenir les middlewares de l'application. 
+Les middlewares sont des composants intermédiaires qui interceptent les requêtes HTTP avant qu'elles n'atteignent les contrôleurs ou après qu'une réponse ait été générée. 
+Ils permettent d'exécuter des tâches comme l'authentification, la gestion des permissions, la validation des requêtes ... 
+Chaque fichier dans ce dossier doit contenir une classe middleware spécifique, respectant les conventions de Laravel, et implémentant la méthode `handle` pour définir la logique de traitement.
+### Exemple de Middleware
+
+Voici un exemple de middleware simple qui vérifie si un utilisateur est authentifié avant de permettre l'accès à une route :
+
+```php
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Support\Facades\Auth;
+
+class Authenticate
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        return $next($request);
+    }
+}
+```

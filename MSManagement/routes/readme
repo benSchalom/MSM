@@ -1,0 +1,29 @@
+Ce dossier `routes` est destiné à contenir l'ensemble des fichiers définissant les routes de l'application. Chaque fichier doit regrouper les routes liées à une fonctionnalité spécifique, en suivant une organisation claire et modulaire. Cela permet de maintenir une structure de code propre et facile à maintenir. Assurez-vous que chaque route est correctement documentée et respecte les conventions de l'application.
+### Exemple de contenu d'un fichier de routes
+
+Voici un exemple de fichier de routes pour une fonctionnalité de gestion des utilisateurs :
+
+```javascript
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
+
+// Route pour récupérer tous les utilisateurs
+router.get('/users', userController.getAllUsers);
+
+// Route pour récupérer un utilisateur par ID
+router.get('/users/:id', userController.getUserById);
+
+// Route pour créer un nouvel utilisateur
+router.post('/users', userController.createUser);
+
+// Route pour mettre à jour un utilisateur existant
+router.put('/users/:id', userController.updateUser);
+
+// Route pour supprimer un utilisateur
+router.delete('/users/:id', userController.deleteUser);
+
+module.exports = router;
+```
+
+Assurez-vous que chaque fichier de routes est bien organisé et que les contrôleurs associés sont correctement définis dans le dossier `controllers`.

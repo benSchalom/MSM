@@ -1,0 +1,12 @@
+Ce dossier est destiné à contenir le code des contrôleurs de l'application. 
+Les contrôleurs jouent un rôle essentiel dans le cadre d'une architecture MVC (Modèle-Vue-Contrôleur) 
+en gérant la logique métier et en servant d'intermédiaire entre les modèles et les vues. 
+Chaque fichier de ce répertoire représentera un contrôleur spécifique, responsable du traitement des requêtes 
+entrantes, de l'interaction avec les modèles, et de la préparation des données à afficher dans les vues. 
+
+_controleurs de tous les utilisateurs (petit exemple)
+  eleves, professeurs, sg, administration, secretaire
+- ElevesController : Gère les requêtes liées aux élèves, telles que l'inscription, la mise à jour des informations, et la consultation des résultats.
+- ProfesseursController : Responsable des actions concernant les professeurs, comme la gestion des cours, la mise à jour des notes, et la consultation des emplois du temps.
+- AdministrationController : S'occupe des tâches administratives globales, comme la gestion des utilisateurs et des paramètres de l'application.
+- SecretaireController : Gère les opérations quotidiennes du secrétariat, inscription des éleves etc
