@@ -1,0 +1,38 @@
+Le dossier `models` dans un projet Flutter front-end doit contenir les classes 
+qui représentent les structures de données utilisées dans l'application. 
+Ces modèles servent à organiser et manipuler les données de manière cohérente, 
+facilitant ainsi leur utilisation dans les widgets et les interactions avec les API 
+ou les bases de données. Par exemple, si votre application gère une liste d'utilisateurs, 
+vous pourriez avoir une classe `User` dans ce dossier, définissant les propriétés comme le nom, 
+l'email et l'identifiant de l'utilisateur.
+
+Exemple de fichier `user.dart` dans le dossier `models` :
+
+```dart
+class User {
+  final String id;
+  final String name;
+  final String email;
+
+  User({required this.id, required this.name, required this.email});
+
+  // Méthode pour convertir un JSON en instance de User
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      id: json['id'],
+      name: json['name'],
+      email: json['email'],
+    );
+  }
+
+  // Méthode pour convertir une instance de User en JSON
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'email': email,
+    };
+  }
+}
+```
+

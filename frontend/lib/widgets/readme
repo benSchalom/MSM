@@ -1,0 +1,69 @@
+Un **widget** en Flutter est l'élément de base de l'interface utilisateur. 
+Tout ce que vous voyez à l'écran dans une application Flutter est un widget, qu'il s'agisse d'un bouton, 
+d'un texte, d'une image ou même de la structure globale de l'application. 
+Les widgets sont utilisés pour construire l'interface utilisateur de manière déclarative, 
+ce qui signifie que vous décrivez comment l'interface doit apparaître en fonction de 
+l'état actuel de l'application.
+
+### Types de widgets
+1. **StatelessWidget** : 
+   - Ce type de widget est immuable, ce qui signifie qu'il ne change pas au fil du temps. 
+   - Il est utilisé lorsque l'interface utilisateur ne dépend pas d'un état dynamique.
+   - Exemple : Un texte statique ou une icône.
+
+2. **StatefulWidget** :
+   - Ce type de widget peut changer au fil du temps en réponse à des interactions utilisateur ou 
+   d'autres événements.
+   - Il est utilisé lorsque l'interface utilisateur doit être mise à jour dynamiquement.
+   - Exemple : Un champ de texte où l'utilisateur peut taper ou un bouton qui change d'apparence lorsqu'il est cliqué.
+
+### Exemple dans votre code
+Dans l'extrait que vous avez fourni, vous avez un widget Flutter appelé `MyWidget`, 
+qui est un **StatelessWidget**. Voici une explication ligne par ligne :
+
+```dart
+class MyWidget extends StatelessWidget {
+```
+- Vous créez une classe `MyWidget` qui hérite de `StatelessWidget`. Cela signifie que ce widget ne changera pas
+ une fois construit.
+
+```dart
+@override
+Widget build(BuildContext context) {
+```
+- La méthode `build` est utilisée pour décrire l'apparence du widget. Elle retourne un autre widget 
+(ou une hiérarchie de widgets).
+
+```dart
+return Scaffold(
+    appBar: AppBar(
+        title: Text('Exemple de Widget'),
+    ),
+    body: Center(
+        child: Text(
+            'Bonjour, ceci est un widget Flutter !',
+            style: TextStyle(fontSize: 20),
+        ),
+    ),
+);
+```
+- Le widget `Scaffold` fournit une structure de base pour une page, avec une barre d'application (`AppBar`) 
+et un corps (`body`).
+- Le `Center` centre son enfant, ici un widget `Text` qui affiche un message.
+
+```dart
+void main() {
+    runApp(MaterialApp(
+        home: MyWidget(),
+    ));
+}
+```
+- La fonction `main` est le point d'entrée de l'application. 
+Elle utilise `runApp` pour lancer l'application avec un widget racine, ici un `MaterialApp` 
+contenant `MyWidget` comme page d'accueil.
+
+### En résumé
+Un widget est une brique de construction de l'interface utilisateur en Flutter. 
+Vous pouvez combiner des widgets simples pour créer des interfaces complexes.
+Dans votre exemple, `MyWidget` est un widget statique qui affiche un texte centré dans une page 
+avec une barre d'application.

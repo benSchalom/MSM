@@ -1,0 +1,32 @@
+Le dossier `screens` d'une application Flutter contient généralement les fichiers qui définissent les différentes interfaces utilisateur (UI) de l'application. Chaque fichier correspond à un écran spécifique, comme la page d'accueil, la page de connexion, ou encore une page de profil. Ces fichiers contiennent des widgets qui structurent et affichent les éléments visuels de chaque écran.
+
+Exemple de fichiers dans le dossier `screens` :
+- `home_screen.dart` : Définit l'écran principal de l'application.
+- `login_screen.dart` : Contient l'interface pour la connexion des utilisateurs.
+- `profile_screen.dart` : Affiche les informations du profil utilisateur.
+- `administration.dart`: Ecran administrateur.
+    .
+    .
+    .
+    
+Exemple d'un fichier `home_screen.dart` :
+```dart
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            appBar: AppBar(
+                title: Text('Home Screen'),
+            ),
+            body: Center(
+                child: Text(
+                    'Welcome to the Home Screen!',
+                    style: TextStyle(fontSize: 20),
+                ),
+            ),
+        );
+    }
+}
+```

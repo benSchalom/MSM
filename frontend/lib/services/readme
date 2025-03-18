@@ -1,0 +1,29 @@
+Ce dossier `/services` est destiné à contenir les services de l'application Flutter. 
+Les services sont des classes ou des fichiers qui gèrent la logique métier, 
+les appels API, ou toute autre interaction avec des sources de données externes. 
+Ils permettent de séparer la logique métier de l'interface utilisateur, rendant le code plus 
+modulaire et maintenable.
+
+Exemple de fichier dans ce dossier : `api_service.dart`
+
+exemple de fichier `api_service.dart` :
+```dart 
+class ApiService {
+  final String baseUrl;
+
+  ApiService(this.baseUrl);
+
+  Future<dynamic> fetchData(String endpoint) async {
+    final url = Uri.parse('$baseUrl$endpoint');
+    try {
+      final response = await http.get(url);
+      if (response.statusCode == 200) {
+        return jsonDecode(response.body);
+      } else {
+        throw Exception('Failed to load data: ${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception('Error fetching data: $e');
+    }
+  }
+}
