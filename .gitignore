@@ -20,3 +20,17 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#Liste de dossiers et fichiers a ignorés
+/vendor/
+/node_modules/
+/public/storage
+/public/hot
+/storage/*.key
+/.env
+/.env.backup
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+frontend/build/
